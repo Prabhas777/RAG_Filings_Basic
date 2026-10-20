@@ -1,0 +1,10 @@
+[project]
+name = "filings-rag-basic"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "openai>=3.35.1",
+    "pgvector>=0.5.1",
+    "psycopg[binary]>=3.3.6",
+    "python-dotenv>=1.2.4",
+]
