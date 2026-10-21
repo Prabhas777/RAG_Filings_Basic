@@ -1,3 +1,6 @@
+<img width="1375" height="741" alt="image" src="https://github.com/user-attachments/assets/e6e7d621-a47c-4198-87cf-62b102a9dcc3" />
+
+
 # SEC 10-K Filings RAG Assistant (Baseline)
 
 An end-to-end Retrieval-Augmented Generation (RAG) system built in Python over NVIDIA's (`NVDA`) SEC Form 10-K filing, backed by **PostgreSQL + pgvector**, **Pydantic structured citations**, **Streamlit**, and an automated **LLM-as-a-Judge evaluation harness**.
