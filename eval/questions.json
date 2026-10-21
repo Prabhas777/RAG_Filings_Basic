@@ -1,0 +1,107 @@
+﻿[
+  {
+    "id": "Q1",
+    "category": "fact",
+    "question": "What are NVIDIA's two reportable operating segments?",
+    "expected_facts": "Compute & Networking and Graphics",
+    "should_refuse": false
+  },
+  {
+    "id": "Q2",
+    "category": "fact",
+    "question": "What products and platforms are included in the Graphics segment?",
+    "expected_facts": "GeForce GPUs for gaming and PCs, GeForce NOW game streaming, and Quadro/NVIDIA RTX GPUs for enterprise workstation graphics",
+    "should_refuse": false
+  },
+  {
+    "id": "Q3",
+    "category": "fact",
+    "question": "What platforms are included in the Compute & Networking segment?",
+    "expected_facts": "Data Center accelerated computing and networking platforms, AI solutions and software, and Automotive platforms",
+    "should_refuse": false
+  },
+  {
+    "id": "Q4",
+    "category": "numeric",
+    "question": "What was NVIDIA's total revenue in the latest fiscal year reported in this 10-K?",
+    "expected_facts": "Total revenue figure in billions of dollars from the consolidated statements of income or MD&A",
+    "should_refuse": false
+  },
+  {
+    "id": "Q5",
+    "category": "numeric",
+    "question": "What was NVIDIA's Data Center revenue in the latest fiscal year reported in this 10-K?",
+    "expected_facts": "Exact Data Center revenue dollar amount in billions from the 10-K",
+    "should_refuse": false
+  },
+  {
+    "id": "Q6",
+    "category": "fact",
+    "question": "Which third-party foundries manufacture NVIDIA's semiconductor wafers?",
+    "expected_facts": "Taiwan Semiconductor Manufacturing Company (TSMC) and Samsung Electronics",
+    "should_refuse": false
+  },
+  {
+    "id": "Q7",
+    "category": "fact",
+    "question": "What is CUDA and how does it fit into NVIDIA's platform strategy?",
+    "expected_facts": "CUDA is NVIDIA's parallel computing programming model and software platform that runs on NVIDIA GPUs",
+    "should_refuse": false
+  },
+  {
+    "id": "Q8",
+    "category": "risk",
+    "question": "How do US government export controls impact NVIDIA's business in China?",
+    "expected_facts": "US export licensing requirements restrict sales of certain high-performance data center GPUs and integrated circuits to China and other restricted markets",
+    "should_refuse": false
+  },
+  {
+    "id": "Q9",
+    "category": "numeric",
+    "question": "How many employees did NVIDIA have at the end of the latest fiscal year?",
+    "expected_facts": "Total headcount number of employees reported in Item 1 of the 10-K",
+    "should_refuse": false
+  },
+  {
+    "id": "Q10",
+    "category": "fact",
+    "question": "Where is NVIDIA's corporate headquarters located?",
+    "expected_facts": "Santa Clara, California",
+    "should_refuse": false
+  },
+  {
+    "id": "Q11",
+    "category": "numeric",
+    "question": "What was NVIDIA's gross margin percentage in the latest fiscal year?",
+    "expected_facts": "Gross margin percentage reported in MD&A (around 70%+ depending on the fiscal year)",
+    "should_refuse": false
+  },
+  {
+    "id": "Q12",
+    "category": "fact",
+    "question": "What networking interconnect technologies does NVIDIA offer for AI data centers?",
+    "expected_facts": "NVLink, InfiniBand (Quantum), and Spectrum Ethernet networking platforms",
+    "should_refuse": false
+  },
+  {
+    "id": "Q13",
+    "category": "refusal",
+    "question": "What was Apple's iPhone revenue in 2025?",
+    "expected_facts": "Must refuse to answer because Apple is not in NVIDIA's 10-K",
+    "should_refuse": true
+  },
+  {
+    "id": "Q14",
+    "category": "refusal",
+    "question": "What was NVIDIA's intraday stock price at 2:15 PM on October 15, 2026?",
+    "expected_facts": "Must refuse to answer because intraday stock prices are not in the 10-K",
+    "should_refuse": true
+  },
+  {
+    "id": "Q15",
+    "category": "refusal",
+    "question": "How many Bitcoin does NVIDIA hold on its balance sheet?",
+    "expected_facts": "Must refuse to answer because Bitcoin holdings are not mentioned in the retrieved 10-K context",
+    "should_refuse": true
+  }
+]
