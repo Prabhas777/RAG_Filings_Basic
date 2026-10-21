@@ -1,11 +1,6 @@
-﻿Here is the complete README.md file in a single, clean copy-and-paste block.
-
-Just open README.md in Cursor's left sidebar, select everything inside it (Ctrl
-+ A), paste this in (Ctrl + V), and save (Ctrl + S):
-
 # SEC 10-K Filings RAG Assistant (Baseline)
 
-An end-to-end Retrieval-Augmented Generation (RAG) system built in plain Python (no LangChain/LlamaIndex) over NVIDIA's (`NVDA`) SEC Form 10-K filing, backed by **PostgreSQL + pgvector**, **Pydantic structured citations**, **Streamlit**, and an automated **LLM-as-a-Judge evaluation harness**.
+An end-to-end Retrieval-Augmented Generation (RAG) system built in Python over NVIDIA's (`NVDA`) SEC Form 10-K filing, backed by **PostgreSQL + pgvector**, **Pydantic structured citations**, **Streamlit**, and an automated **LLM-as-a-Judge evaluation harness**.
 
 ## Architecture
 
@@ -96,14 +91,3 @@ streamlit run app.py
 ```powershell
 python -m src.evaluate
 ```
-
-Once you paste and save README.md in Cursor, run these 5 commands in your
-terminal to push everything to GitHub:
-
-git add .
-git commit -m "Complete 7-step basic SEC 10-K RAG pipeline with 15-question eval (86.7%)"
-git branch -M main
-git remote add origin https://github.com/Prabhas777/RAG_Filings_Basic.git
-git push -u origin main --force
-
-Let me know as soon as you push it!
