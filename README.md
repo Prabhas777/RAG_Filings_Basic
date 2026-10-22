@@ -9,7 +9,7 @@
 This project is a question-answering system built in Python for NVIDIA's (`NVDA`) annual SEC Form 10-K report. It uses **PostgreSQL with pgvector** to store and search document chunks, **OpenAI** for embeddings and answers, **Pydantic** to enforce citations, and **Streamlit** for the web interface. It also includes an automated evaluation script that grades the system on 15 test questions.
 
 ## Video Walkthrough
-**[Watch the 2-Minute Project Walkthrough on Loom](PASTE_YOUR_LOOM_LINK_HERE)**
+**[Watch the 2-Minute Project Walkthrough on Loom](https://www.loom.com/share/03dad793f66c40f18ae47c240447a58e)**
 
 ## How It Works
 
