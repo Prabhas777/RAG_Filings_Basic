@@ -100,3 +100,31 @@ streamlit run app.py
 ```powershell
 python -m src.evaluate
 ```
+
+
+## How I Built This with Claude Code + Cursor
+
+I built the evaluation harness (`src/evaluate.py`) by directing Claude Code in the terminal and reviewing every diff in Cursor before committing.
+
+### Goal
+Stop checking answers by eye. The harness runs 15 test questions (12 factual/numeric, 3 out-of-scope trick questions), checks each answer's facts and cited chunks, confirms the trick questions are refused, records response time, and outputs the results table above.
+
+### How I steered the agent
+- **Plan before code.** Started in plan mode. The agent read `src/rag.py` and the answer schema without editing anything, then proposed a test-case format, grading rules per category, and a report format.
+- **Edited the plan before approving it.** Test cases live in a separate data file instead of being hardcoded, and refusals are graded on the `is_refusal` flag rather than the wording.
+- **Small steps, checked each time.** Test-case loader → one grader at a time → report, running the script after each step.
+- **Project rules in `CLAUDE.md`.** Run commands and guardrails such as "don't edit `src/rag.py` during this task."
+
+### What the agent got wrong
+When Q9 failed, the agent's proposed fix was to loosen the rubric so it no longer required the `Item 1` section citation. That would have raised the score while hiding the real problem: fixed 2,000-character chunking strips SEC section headers. I rejected the change, kept the rubric, and documented the root cause and fix in *What Failed and How to Fix It Next*.
+
+### How I verified the result
+- Full eval run: 13/15 overall, 3/3 refusals, ~2s per answer.
+- Didn't trust the pass/fail labels alone. For both failures and several passes, I opened the retrieved chunks in the Streamlit app and checked the figures against the 10-K.
+- Rebuilt from the steps in this README on a fresh database to confirm the results reproduce.
+
+### Known limits
+- 15 questions is too small a set for 86.7% to be statistically meaningful.
+- The grader can mark a correct but differently worded answer as wrong.
+- Tested on one company's 10-K only.
+- No unit tests for the grader itself, and no load testing.
